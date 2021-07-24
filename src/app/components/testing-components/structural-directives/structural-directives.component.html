@@ -1,0 +1,8 @@
+<p *ngIf="isAdmin(); else otherCase">This is an admin!</p>
+<ng-template #otherCase>
+  <p>This is the alternative</p>
+</ng-template>
+
+<div *ngFor="let user of users; let i = index">
+  <p *ngIf="i % 2 === 0">{{ user }}</p>
+</div>

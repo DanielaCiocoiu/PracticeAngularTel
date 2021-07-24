@@ -9,6 +9,8 @@ import { OneWayDemoComponent } from './components/testing-components/one-way-dem
 import { TwoWayDemoComponent } from './components/testing-components/two-way-demo/two-way-demo.component';
 import { FormsModule } from '@angular/forms';
 import { EventPropBindingComponent } from './components/testing-components/event-prop-binding/event-prop-binding.component';
+import { StructuralDirectivesComponent } from './components/testing-components/structural-directives/structural-directives.component';
+import { AtributeDirectiveComponent } from './components/testing-components/atribute-directive/atribute-directive.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { EventPropBindingComponent } from './components/testing-components/event
     OneWayDemoComponent,
     TwoWayDemoComponent,
     EventPropBindingComponent,
+    StructuralDirectivesComponent,
+    AtributeDirectiveComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],

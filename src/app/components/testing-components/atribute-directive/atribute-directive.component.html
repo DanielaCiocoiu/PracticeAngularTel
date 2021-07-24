@@ -1,0 +1,26 @@
+<h1>Chat application</h1>
+<div *ngFor="let user of users">
+  <h2>{{ user.name }}</h2>
+  <p>
+    [ngClass]="{'online-user': user.active, 'offline-user': !user.active}">
+    Status: {{ user.active ? "Online" : "Offline" }}
+  </p>
+</div>
+
+<br />
+
+<!-- <h1>NgStyle demo</h1>
+<div *ngFor="let user of users">
+  <h2>{{ user.name }}</h2>
+  <p [ngStyle]="[color: user.active ? 'green': 'red'}">
+    Status: {{ user.active ? "Online" : "Offline" }}
+  </p>
+</div> -->
+<!-- sau -->
+<h1>NgStyle demo</h1>
+<div *ngFor="let user of users">
+  <h2>{{ user.name }}</h2>
+  <p [ngStyle]="{ color: getColor(user) }">
+    Status: {{ user.active ? "Online" : "Offline" }}
+  </p>
+</div>

@@ -6,8 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./event-prop-binding.component.css'],
 })
 export class EventPropBindingComponent implements OnInit {
+  inputDisabled = false;
+  inputValue = 'Value for the input';
   constructor() {}
 
   ngOnInit(): void {}
-  clickTest() {}
+
+  testTheClick(): void {
+    console.log('Test in the  clicked');
+    this.inputValue = this.inputValue + 'a';
+    this.inputDisabled = !this.inputDisabled;
+  }
+  // testTheInput(event: any){
+  //   console.log("event ");
+  // }
+
+  testTheInput() {
+    console.log('Test in the input desabled ');
+  }
 }
