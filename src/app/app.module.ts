@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
@@ -11,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { EventPropBindingComponent } from './components/testing-components/event-prop-binding/event-prop-binding.component';
 import { StructuralDirectivesComponent } from './components/testing-components/structural-directives/structural-directives.component';
 import { AtributeDirectiveComponent } from './components/testing-components/atribute-directive/atribute-directive.component';
+import { RoutingModule } from './components/routing.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,7 @@ import { AtributeDirectiveComponent } from './components/testing-components/atri
     StructuralDirectivesComponent,
     AtributeDirectiveComponent,
   ],
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, RoutingModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

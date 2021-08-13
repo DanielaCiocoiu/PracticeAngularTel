@@ -7,6 +7,9 @@ import { UserModel } from 'src/app/model/user.model';
   styleUrls: ['./atribute-directive.component.css'],
 })
 export class AtributeDirectiveComponent implements OnInit {
+  
+  public userModel: UserModel;
+
   users: UserModel[] = [
     {
       name: 'User A',
@@ -18,11 +21,13 @@ export class AtributeDirectiveComponent implements OnInit {
     },
   ];
 
-  constructor() {}
+  constructor() {
+    this.userModel = new UserModel();
+  }
 
-  ngOnInit(): void { }
-  getColor(user: UserModel): string{
+  ngOnInit(): void {}
+
+  getColor(user: UserModel): string {
     return user.active ? 'green' : 'red';
-    
   }
 }
