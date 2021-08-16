@@ -13,6 +13,14 @@ import { EventPropBindingComponent } from './components/testing-components/event
 import { StructuralDirectivesComponent } from './components/testing-components/structural-directives/structural-directives.component';
 import { AtributeDirectiveComponent } from './components/testing-components/atribute-directive/atribute-directive.component';
 import { RoutingModule } from './components/routing.module';
+import { LoginComponent } from './components/login/login.component';
+import { MoviesComponent } from './components/movies/movies.component';
+import { WatchListComponent } from './components/watch-list/watch-list.component';
+import { HomeComponent } from './components/home/home.component';
+import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
+import { ParentGuard } from 'src/guard/parent.guard';
+import { ChildGuard } from 'src/guard/child.guard';
+import { MoviesResolver } from 'src/resolvers/movies.resolver';
 
 @NgModule({
   declarations: [
@@ -25,9 +33,14 @@ import { RoutingModule } from './components/routing.module';
     EventPropBindingComponent,
     StructuralDirectivesComponent,
     AtributeDirectiveComponent,
+    LoginComponent,
+    MoviesComponent,
+    WatchListComponent,
+    HomeComponent,
+    MovieDetailsComponent,
   ],
   imports: [BrowserModule, FormsModule, RoutingModule, BrowserAnimationsModule],
-  providers: [],
+  providers: [ParentGuard, ChildGuard, MoviesResolver],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

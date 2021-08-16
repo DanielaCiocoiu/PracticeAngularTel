@@ -1,4 +1,4 @@
 export class UserModel {
-  name: string;
-  active: boolean;
+  name: string | undefined;
+  active: boolean | undefined;
 }
